@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pendulum
+  - Enemy
+  - Bullet
+  - Item
   layers:
   - Default
   - TransparentFX
