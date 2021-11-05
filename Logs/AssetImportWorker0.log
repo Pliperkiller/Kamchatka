@@ -160,3 +160,11 @@ Received Import Request.
 Start importing Assets/Apendulum using Guid(cc5e764a8f1bc60469ec17b65bbc4399) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1d6005589bb9f31d2d6be408e282095') in 0.002044 seconds 
   Import took 0.004037 seconds .
 
+========================================================================
+Received Import Request.
+  Time since last request: 51.375974 seconds.
+  path: Assets/Apendulum/Materials
+  artifactKey: Guid(27b2725e51553114cb1d94f0e66e652c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Apendulum/Materials using Guid(27b2725e51553114cb1d94f0e66e652c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dc9e6eccebc0d98979c2a95d8eaa1e') in 0.005415 seconds 
+  Import took 0.007509 seconds .
+
