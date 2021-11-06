@@ -5,15 +5,16 @@ using UnityEngine;
 public class AttractField : MonoBehaviour
 {
 
-    public GameObject Player;
-    public float attforce;
-    public float radius;
+    private GameObject Player;
+    [SerializeField] private float attforce;
+    [SerializeField] private float radius;
     private float objdist;
     private Transform TR;
     private Rigidbody RB;
 
     void Start()
     {
+        Player = GameObject.FindWithTag("Player");
         TR = GetComponent<Transform>();
         RB = GetComponent<Rigidbody>();
     }
@@ -29,7 +30,15 @@ public class AttractField : MonoBehaviour
 
         }
 
-
+        Debug.Log(Player.transform.position);
         
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Destroy(this);
+        }
     }
 }
