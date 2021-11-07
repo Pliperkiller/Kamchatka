@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 public class Tetronimos : MonoBehaviour
@@ -56,6 +57,15 @@ public class Tetronimos : MonoBehaviour
             }
 
             tiempoAnterior = Time.time;
+        }
+
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            transform.RotateAround(transform.TransformPoint(puntoRotation), new Vector3(0,0,1), -90);
+            if (!Limites())
+            {
+                transform.RotateAround(transform.TransformPoint(puntoRotation), new Vector3(0, 0, 1), 90);
+            }
         }
     }
 
