@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Apendulum/Scenes/Intro.unity
+    guid: 316169f1698bd99489daafed3c29803e
+  - enabled: 1
+    path: Assets/Apendulum/Scenes/Apendulum/Apendulum.unity
+    guid: 8f9f0da14fc1a0a4fa92689ee4ded73c
   m_configObjects: {}

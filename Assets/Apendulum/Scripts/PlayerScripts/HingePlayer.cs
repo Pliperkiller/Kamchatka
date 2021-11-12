@@ -5,9 +5,10 @@ using UnityEngine;
 public class HingePlayer : MonoBehaviour
 {
     private bool contact=false;
-    private int conected=0;
+    public int conected=0;
     private HingeJoint HJ;
     private Collider item;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +33,6 @@ public class HingePlayer : MonoBehaviour
                 HJ.connectedBody = item.attachedRigidbody;
             }
 
-            Debug.Log("Hinged");
 
             conected = 1;
 
@@ -47,7 +47,6 @@ public class HingePlayer : MonoBehaviour
                 conected = -1;
             }
 
-            Debug.Log("Lift");
             
         }
 

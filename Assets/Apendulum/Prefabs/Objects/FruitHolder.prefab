@@ -9,13 +9,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6659561192734559933}
-  - component: {fileID: 6795554522168241710}
   - component: {fileID: -4675394658884796189}
   - component: {fileID: -1652771054474540945}
+  - component: {fileID: 6795554522168241710}
   - component: {fileID: 5619196235611837512}
+  - component: {fileID: 3896626901203786107}
   m_Layer: 0
   m_Name: FruitHolder
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35,20 +36,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6795554522168241710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 418693860440470959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac39def763a6314b904ef45f6954cbe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attforce: 1
-  radius: 4.5
 --- !u!54 &-4675394658884796189
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -78,6 +65,20 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6795554522168241710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418693860440470959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac39def763a6314b904ef45f6954cbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attforce: 0.05
+  radius: 3
 --- !u!114 &5619196235611837512
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -88,6 +89,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a4b2416ed2364f4baec5ab132fe1f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3896626901203786107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418693860440470959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa91701be8a03cb47a65e49a8cf451b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &766762360969566008

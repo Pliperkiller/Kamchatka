@@ -13,7 +13,7 @@ public class RandomMass : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
 
-        epsilon = Random.Range(-10,10);
+        epsilon = Random.Range(-5.0f,5.0f);
 
         rb.mass = mass + epsilon;
     }

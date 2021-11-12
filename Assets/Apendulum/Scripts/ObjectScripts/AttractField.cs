@@ -29,8 +29,6 @@ public class AttractField : MonoBehaviour
             RB.AddForce((Player.transform.position - TR.position) / (objdist* objdist* objdist) * attforce);
 
         }
-
-        Debug.Log(Player.transform.position);
         
     }
 

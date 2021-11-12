@@ -9,9 +9,11 @@ public class PendulumStart : MonoBehaviour
     private float epsilon;
     private float vel;
 
+
     // Start is called before the first frame update
     void Start()
     {
+
         epsilon = Random.Range(-2.0f, 2.0f);
         vel = 16.0f;
 
@@ -24,6 +26,6 @@ public class PendulumStart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

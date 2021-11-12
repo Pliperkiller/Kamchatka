@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Bullet
   - Item
+  - Deadzone
   layers:
   - Default
   - TransparentFX
