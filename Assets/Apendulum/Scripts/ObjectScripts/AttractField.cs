@@ -6,28 +6,30 @@ public class AttractField : MonoBehaviour
 {
 
     private GameObject Player;
-    [SerializeField] private float attforce;
+    [SerializeField] private float speed;
     [SerializeField] private float radius;
     private float objdist;
-    private Transform TR;
-    private Rigidbody RB;
+    private int Bandera=0;
 
     void Start()
     {
         Player = GameObject.FindWithTag("Player");
-        TR = GetComponent<Transform>();
-        RB = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
 
-        float objdist = Vector3.Distance(Player.transform.position, TR.position);
+        float objdist = Vector3.Distance(Player.transform.position, transform.position);
 
         if (objdist < radius)
         {
-            RB.AddForce((Player.transform.position - TR.position) / (objdist* objdist* objdist) * attforce);
+            Bandera = 1;
 
+        }
+
+        if (Bandera == 1)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, Player.transform.position, speed*Time.deltaTime);
         }
         
     }
