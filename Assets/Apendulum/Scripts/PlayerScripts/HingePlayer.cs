@@ -26,6 +26,7 @@ public class HingePlayer : MonoBehaviour
                 HJ.anchor = new Vector3(0, 1.2f, 0);
                 HJ.autoConfigureConnectedAnchor = true;
                 HJ.connectedBody = item.attachedRigidbody;
+                
             }
 
             if (conected == 0)
