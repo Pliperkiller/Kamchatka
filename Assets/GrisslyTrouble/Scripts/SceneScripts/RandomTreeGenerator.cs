@@ -6,6 +6,7 @@ public class RandomTreeGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject[] sceneModels;
     [SerializeField] private int amount = 10;
+    private Quaternion rotation = Quaternion.identity;
 
     // Start is called before the first frame update
     void Start()
@@ -20,16 +21,11 @@ public class RandomTreeGenerator : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void AddItem()
     {
-        Vector3 position = new Vector3(Random.Range(-25, 25), 0.5f, Random.Range(-25, 25));
-        Instantiate(sceneModels[Random.Range(0,sceneModels.Length)], position, Quaternion.identity);
+        rotation.Set(0, Random.Range(-1.0f, 1.0f), 0, 0);
+        Vector3 position = new Vector3(Random.Range(-23, 23), 0.5f, Random.Range(-23, 23));
+        Instantiate(sceneModels[Random.Range(0,sceneModels.Length)], position, rotation);
     }
 
 }

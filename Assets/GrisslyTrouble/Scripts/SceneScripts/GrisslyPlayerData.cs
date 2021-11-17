@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GrisslyPlayerData : MonoBehaviour
@@ -13,6 +11,7 @@ public class GrisslyPlayerData : MonoBehaviour
     public bool HasPuzzle;
     public bool Dead;
     public bool roundIsActive;
+    public bool onCamp;
     
 
     void Start()
@@ -25,6 +24,8 @@ public class GrisslyPlayerData : MonoBehaviour
         HasPuzzle = false;
         Dead = false;
         roundIsActive = false;
+        onCamp = false;
+
 
     }
 
@@ -37,15 +38,15 @@ public class GrisslyPlayerData : MonoBehaviour
             Dead = true;
             Debug.Log(Dead);
 
-            Destroy(GameObject.FindWithTag("Player"));
         }
 
         if (honeyAmount == 10)
         {
             nextLevel = true;
 
-            Debug.Log(nextLevel);
         }
-        
+
+
+
     }
 }

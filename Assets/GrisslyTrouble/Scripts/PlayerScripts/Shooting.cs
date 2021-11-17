@@ -1,13 +1,20 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public GameObject Playergun;
-    public GameObject Bullet;
+    [SerializeField] private GameObject Playergun;
+    [SerializeField] private GameObject Bullet;
+
+    private GrisslyPlayerData PlayerData;
+    private GameObject SceneController;
+
     private int ammo = 100;
 
+    private void Start()
+    {
+        SceneController = GameObject.Find("SceneController");
+        PlayerData = SceneController.GetComponent<GrisslyPlayerData>();
+    }
     void Update()
     {
         bool shootdown = Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
@@ -18,11 +25,9 @@ public class Shooting : MonoBehaviour
             ammo += -1;
         }
 
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyDown("e") && PlayerData.onCamp)
         {
-
             ammo = 100;
-
         }
 
     }

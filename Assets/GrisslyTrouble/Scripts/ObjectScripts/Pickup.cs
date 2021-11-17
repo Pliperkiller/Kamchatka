@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Pickup : MonoBehaviour
@@ -15,12 +13,6 @@ public class Pickup : MonoBehaviour
         SceneController = GameObject.Find("SceneController");
         PlayerData = SceneController.GetComponent<GrisslyPlayerData>();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter(Collider other)

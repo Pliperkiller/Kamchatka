@@ -1,57 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-    public float velocity = 5.0f;
-    public float jforce = 2.0f;
+    private float velocity;
     private Vector3 VelVector;
-    private Vector3 fvector;
-    private bool onfloor = false;
-    private Rigidbody RB;
     private float h;
     private float v;
+    public float extraHoney = 0.0f;
 
-     void Start()
+    private Rigidbody rb;
+    private GrisslyPlayerData PlayerData;
+    private GameObject SceneController;
+
+    void Start()
     {
-        RB = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        SceneController = GameObject.Find("SceneController");
+        PlayerData = SceneController.GetComponent<GrisslyPlayerData>();
 
+        velocity = 5.0f;
     }
 
 
     void Update()
     {
-
         h = Input.GetAxisRaw("Horizontal");
         v = Input.GetAxisRaw("Vertical");
 
-        VelVector = new Vector3(h * velocity, 0, v * velocity);
-        fvector = new Vector3(0,1,0) * jforce;
 
-        transform.Translate(VelVector * Time.deltaTime, Space.World);
 
-        if (Input.GetKeyDown(KeyCode.Space) & onfloor)
+        if (h != 0 && v != 0)
         {
-            RB.AddForce(fvector);
+            
+            VelVector = new Vector3(h * velocity/1.4142f, 0, v * velocity / 1.4142f);
+
         }
+
+        else if(h!=0 || v != 0)
+        {
+            VelVector = new Vector3(h * velocity, 0, v * velocity);
+
+        }
+        else
+        {
+            VelVector = new Vector3(0, 0, 0);
+
+        }
+
+        rb.velocity = VelVector;
+
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Floor")
+        if (other.tag == "Item")
         {
-            Debug.Log("On Floor");
-            onfloor = true;
+            if (PlayerData.honeyAmount>10)
+            {
+                extraHoney++;
+
+                velocity = 30 - 25 * Mathf.Exp(-0.005f * extraHoney);
+               
+
+            }
+            
         }
     }
 
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Floor")
-        {
-            Debug.Log("On Air");
-            onfloor = false;
-        }
-    }
 }

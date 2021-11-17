@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class RandomHoneyGenerator : MonoBehaviour
@@ -8,8 +6,10 @@ public class RandomHoneyGenerator : MonoBehaviour
     private GrisslyPlayerData PlayerData;
     private GameObject SceneController;
     private GameObject[] honeys;
+
+    public bool onCamp=false;
     private int level;
-    private int amount=20;
+    private int amount = 20;
     private int bandera = 1;
 
     // Start is called before the first frame update
@@ -25,52 +25,63 @@ public class RandomHoneyGenerator : MonoBehaviour
 
         honeys = GameObject.FindGameObjectsWithTag("Item");
 
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        honeys = GameObject.FindGameObjectsWithTag("Item");
-    }
-
-    private void Addhoney()
-    {
-        Vector3 position = new Vector3(Random.Range(-25, 25), 0.5f, Random.Range(-25, 25));
-        Instantiate(honey, position, Quaternion.identity);
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player" && bandera==1 && PlayerData.nextLevel)
+        if (Input.GetKeyDown("e") && PlayerData.nextLevel && onCamp)
         {
+            honeys = GameObject.FindGameObjectsWithTag("Item");
+
             for (int i = 0; i < honeys.Length; i++)
             {
                 Destroy(honeys[i]);
             }
 
+            for (int i = 0; i < amount; i++)
+            {
+                Addhoney();
+            }
+
             PlayerData.level++;
 
-            Debug.Log("Level: " + PlayerData.level);
+
 
             PlayerData.nextLevel = false;
             PlayerData.honeyAmount = 0;
 
-            bandera = 0;
+
+        }
+
+        Debug.Log(onCamp);
+
+    }
+
+    private void Addhoney()
+    {
+        Vector3 position = new Vector3(Random.Range(-20, 20), 0.5f, Random.Range(-20, 20));
+        Instantiate(honey, position, Quaternion.identity);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        
+        if (other.tag == "Player")
+        {
+            onCamp = true;
+            PlayerData.onCamp = onCamp;
 
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player" && bandera == 0 && PlayerData.nextLevel==false)
+        if (other.tag == "Player")
         {
-            for (int i = 0; i < amount; i++)
-            {
-                Addhoney();
-            }
+            onCamp = false;
+            PlayerData.onCamp = onCamp;
 
-            bandera = 1;
 
         }
     }

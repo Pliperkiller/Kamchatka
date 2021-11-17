@@ -27,7 +27,7 @@ public class RoundStarter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && PlayerData.Dead==false)
         {
             PlayerData.roundIsActive = true;
         }

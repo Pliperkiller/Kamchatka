@@ -12,6 +12,7 @@ public class RandomHiveGenerator : MonoBehaviour
     private int hives;
     private int bandera=1;
 
+
     void Start()
     {
         SceneController = GameObject.Find("SceneController");
@@ -30,7 +31,7 @@ public class RandomHiveGenerator : MonoBehaviour
 
     private void Addhive()
     {
-        Vector3 position = new Vector3(Random.Range(-25, 25), 0.5f, Random.Range(-25, 25));
+        Vector3 position = new Vector3(Random.Range(-23, 23), 0.5f, Random.Range(-23, 23));
         Instantiate(hive, position, Quaternion.identity);
     }
 
