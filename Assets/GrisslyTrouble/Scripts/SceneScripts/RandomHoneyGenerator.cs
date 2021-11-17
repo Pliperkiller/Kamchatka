@@ -54,7 +54,6 @@ public class RandomHoneyGenerator : MonoBehaviour
 
         }
 
-        Debug.Log(onCamp);
 
     }
 
