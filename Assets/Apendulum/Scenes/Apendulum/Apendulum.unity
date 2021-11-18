@@ -616,6 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: {fileID: 418693860440470959, guid: 97793611d6b65c8499933c6311adf5ec, type: 3}
+  amount: 0
 --- !u!114 &79014097
 MonoBehaviour:
   m_ObjectHideFlags: 0
