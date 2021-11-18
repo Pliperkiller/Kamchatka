@@ -9,6 +9,8 @@ TagManager:
   - Bullet
   - Item
   - Deadzone
+  - EnemySpawn
+  - EndZone
   layers:
   - Default
   - TransparentFX
