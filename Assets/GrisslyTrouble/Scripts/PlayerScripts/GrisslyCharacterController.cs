@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CharacterController : MonoBehaviour
+public class GrisslyCharacterController : MonoBehaviour
 {
     private float velocity;
     private Vector3 VelVector;

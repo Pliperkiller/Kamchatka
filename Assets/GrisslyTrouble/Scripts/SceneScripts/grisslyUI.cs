@@ -7,7 +7,9 @@ public class grisslyUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI Tpoints;
     [SerializeField] TextMeshProUGUI Tnextlevel;
     [SerializeField] TextMeshProUGUI Thealth;
+    [SerializeField] TextMeshProUGUI Tammo;
     [SerializeField] TextMeshProUGUI Gpoints;
+
     [SerializeField] GameObject GameOverPanel;
     [SerializeField] GameObject NewLevelPanel;
 
@@ -29,6 +31,7 @@ public class grisslyUI : MonoBehaviour
         Tlevel.text = PlayerData.level.ToString();
         Tpoints.text = PlayerData.points.ToString();
         Thealth.text = PlayerData.health.ToString();
+        Tammo.text = PlayerData.ammo.ToString();
 
         if (PlayerData.honeyAmount < 11)
         {

@@ -7,11 +7,13 @@ public class GrisslyPlayerData : MonoBehaviour
     public int level;
     public int points;
     public int honeyAmount;
+    public int ammo;
     public bool nextLevel;
     public bool HasPuzzle;
     public bool Dead;
     public bool roundIsActive;
     public bool onCamp;
+    
     
 
     void Start()
@@ -20,6 +22,7 @@ public class GrisslyPlayerData : MonoBehaviour
         level = 1;
         points = 0;
         honeyAmount = 0;
+        ammo = 100;
         nextLevel = false;
         HasPuzzle = false;
         Dead = false;

@@ -28,6 +28,7 @@ public class HingeObject : MonoBehaviour
         }
     }
 
+
     private void OnCollisionEnter(Collision collision)
     {
 
@@ -45,7 +46,7 @@ public class HingeObject : MonoBehaviour
     private void addhinge(Collision collision)
     {
         HingeJoint HJ = gameObject.AddComponent<HingeJoint>() as HingeJoint;
-        HJ.anchor = collision.contacts[0].point;
+        //HJ.anchor = collision.contacts[0].point;
         HJ.autoConfigureConnectedAnchor = true;
         HJ.connectedBody = collision.collider.attachedRigidbody;
     }
