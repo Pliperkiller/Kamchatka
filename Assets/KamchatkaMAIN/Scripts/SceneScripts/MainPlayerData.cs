@@ -4,10 +4,18 @@ using UnityEngine;
 
 public class MainPlayerData : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public string playerAnimalStatus;
+    public bool northPiece;
+    public bool southPiece;
+    public bool eastPiece;
+    public bool westhPiece;
+    public Transform playerLocation;
+
     void Start()
     {
-        
+        playerAnimalStatus = "Default";
+
     }
 
     // Update is called once per frame

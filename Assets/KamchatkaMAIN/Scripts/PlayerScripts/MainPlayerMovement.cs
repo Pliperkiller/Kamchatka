@@ -66,7 +66,7 @@ public class MainPlayerMovement : MonoBehaviour
         }
 
         Vector3 velocity = movementDirection * magnitude;
-        velocity = AdjustVeloscityToSlope(velocity);
+        //velocity = AdjustVeloscityToSlope(velocity);
         velocity.y += ySpeed;
 
         controller.Move(velocity * Time.deltaTime);

@@ -13,9 +13,11 @@ public class Shooting : MonoBehaviour
     {
         SceneController = GameObject.Find("SceneController");
         PlayerData = SceneController.GetComponent<GrisslyPlayerData>();
+
     }
     void Update()
     {
+
         bool shootdown = Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
         if ( shootdown & (PlayerData.ammo>0))
         {
@@ -30,4 +32,5 @@ public class Shooting : MonoBehaviour
         }
 
     }
+
 }
