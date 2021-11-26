@@ -50,6 +50,36 @@ public class AnimalConversion : MonoBehaviour
             playerData.playerAnimalStatus = "Monkey";
         }
 
+        if (target == "Bear" && playerData.playerAnimalStatus != "Bear")
+        {
+            Destroy(GameObject.FindWithTag("PlayerModel"));
+
+            newModel = Instantiate(animalPrefabs[2]);
+            newModel.transform.SetParent(transform, false);
+
+            playerData.playerAnimalStatus = "Monkey";
+        }
+
+        if (target == "Squirrel" && playerData.playerAnimalStatus != "Squirrel")
+        {
+            Destroy(GameObject.FindWithTag("PlayerModel"));
+
+            newModel = Instantiate(animalPrefabs[3]);
+            newModel.transform.SetParent(transform, false);
+
+            playerData.playerAnimalStatus = "Monkey";
+        }
+
+        if (target == "Otter" && playerData.playerAnimalStatus != "Otter")
+        {
+            Destroy(GameObject.FindWithTag("PlayerModel"));
+
+            newModel = Instantiate(animalPrefabs[4]);
+            newModel.transform.SetParent(transform, false);
+
+            playerData.playerAnimalStatus = "Monkey";
+        }
+
     }
 
 }
