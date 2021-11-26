@@ -6,14 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-<<<<<<< HEAD
-    path: Assets/Tetris/Scenes/Tetris.unity
-    guid: 7fe5d88449e608e41a9bc7050a92bc14
-=======
-    path: Assets/Apendulum/Scenes/Intro.unity
+    path: Assets/Apendulum/Scenes/IntroApendulum.unity
     guid: 316169f1698bd99489daafed3c29803e
   - enabled: 1
     path: Assets/Apendulum/Scenes/Apendulum/Apendulum.unity
     guid: 8f9f0da14fc1a0a4fa92689ee4ded73c
->>>>>>> Carlos
+  - enabled: 1
+    path: Assets/GrisslyTrouble/Scenes/IntroGrissly.unity
+    guid: f50185c5ba896434eb58b041a3536723
+  - enabled: 1
+    path: Assets/GrisslyTrouble/Scenes/GrisslyTrouble/GrisslyTrouble.unity
+    guid: cf94483dfd267d94797d9dec1859a512
   m_configObjects: {}

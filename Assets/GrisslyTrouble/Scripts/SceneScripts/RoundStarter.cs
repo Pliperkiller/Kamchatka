@@ -35,7 +35,7 @@ public class RoundStarter : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Player" && PlayerData.nextLevel)
         {
             PlayerData.roundIsActive = false;
 
