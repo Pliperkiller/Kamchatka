@@ -15,10 +15,14 @@ public class MainPlayerMovement : MonoBehaviour
     private float? lastGroundTime;
     private float? jumpPressTime;
 
+    public bool isMoving;
+    public bool onAir;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
         originalStepOffset = controller.stepOffset;
+        onAir = false;
         
     }
 
@@ -40,6 +44,8 @@ public class MainPlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             lastGroundTime = Time.time;
+            onAir = false;
+
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -55,6 +61,7 @@ public class MainPlayerMovement : MonoBehaviour
             if (Time.time - jumpPressTime <= jumpDelayTime)
             {
                 ySpeed = jumpSpeed;
+                onAir = true;
                 jumpPressTime = null;
                 lastGroundTime = null;
 
@@ -80,7 +87,14 @@ public class MainPlayerMovement : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+
+            isMoving = true;
         }
+        else
+        {
+            isMoving = false;
+        }
+
 
     }
 
