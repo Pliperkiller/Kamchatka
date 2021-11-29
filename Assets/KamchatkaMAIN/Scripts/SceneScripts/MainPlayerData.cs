@@ -6,11 +6,14 @@ public class MainPlayerData : MonoBehaviour
 {
 
     public string playerAnimalStatus;
-    public bool northPiece;
-    public bool southPiece;
-    public bool eastPiece;
-    public bool westhPiece;
+    public bool BearPiece;
+    public bool MonkeyPiece;
+    public bool SquirrelPiece;
+    public bool OtterPiece;
+    public bool onDialog;
+
     public Transform playerLocation;
+    
 
     void Start()
     {

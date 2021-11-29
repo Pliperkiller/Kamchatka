@@ -14,6 +14,11 @@ public class MainPlayerMovement : MonoBehaviour
     private float originalStepOffset;
     private float? lastGroundTime;
     private float? jumpPressTime;
+    private float horizontalInput;
+    private float verticalInput;
+
+    private MainPlayerData playerData;
+    private GameObject SceneController;
 
     public bool isMoving;
     public bool onAir;
@@ -23,14 +28,25 @@ public class MainPlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         originalStepOffset = controller.stepOffset;
         onAir = false;
-        
+
+        SceneController = GameObject.Find("SceneController");
+        playerData = SceneController.GetComponent<MainPlayerData>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
+        if (playerData.onDialog)
+        {
+            horizontalInput = 0.0f;
+            verticalInput = 0.0f;
+        }
+        else
+        {
+            horizontalInput = Input.GetAxis("Horizontal");
+            verticalInput = Input.GetAxis("Vertical");
+        }
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
 
