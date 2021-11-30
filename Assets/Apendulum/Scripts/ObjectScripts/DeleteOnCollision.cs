@@ -6,7 +6,7 @@ public class DeleteOnCollision : MonoBehaviour
 {
     private int bandera = 1;
     private GameObject SceneController;
-    private PlayerData PlayerData;
+    private PlayerData playerData;
 
 
 
@@ -14,8 +14,9 @@ public class DeleteOnCollision : MonoBehaviour
     void Start()
     {
         SceneController = GameObject.Find("SceneController");
-        PlayerData = SceneController.GetComponent<PlayerData>();
+        playerData = SceneController.GetComponent<PlayerData>();
 
+        Debug.Log(gameObject.name);
     }
 
 
@@ -30,8 +31,13 @@ public class DeleteOnCollision : MonoBehaviour
             if (bandera == 1)
             {
                 bandera++;
-                PlayerData.level++;
-                PlayerData.points++;
+                playerData.points++;
+
+                if(gameObject.name == "Puzzle(Clone)")
+                {
+                    playerData.puzzleOnBoard = false;
+                    playerData.HasPuzzle = true;
+                }
 
                 Destroy(gameObject);
 
@@ -42,6 +48,12 @@ public class DeleteOnCollision : MonoBehaviour
 
         if (collision.gameObject.name == "Deadzone")
         {
+            if (gameObject.name == "Puzzle(Clone)")
+            {
+                playerData.puzzleOnBoard = false;
+
+            }
+
             Destroy(gameObject);
         }
     }
