@@ -25,7 +25,6 @@ public class UIDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Tlevel.text = PlayerData.level.ToString();
         Tpoints.text = PlayerData.points.ToString();
 
 

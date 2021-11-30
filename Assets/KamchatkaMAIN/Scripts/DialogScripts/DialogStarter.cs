@@ -4,39 +4,40 @@ using UnityEngine;
 
 public class DialogStarter : MonoBehaviour
 {
-    [SerializeField] private GameObject chat;
-    [SerializeField] private GameObject action;
+
+    private int bandera;
+    private string characterName;
+    private bool playerIsNear;
 
     private MainPlayerData playerData;
     private GameObject SceneController;
-    private int bandera;
+
 
 
     public int estadoActual;
     public EstadoDialogo[] estados;
-    // Start is called before the first frame update
 
-    private bool playerIsNear;
+
 
     private void Start()
     {
         SceneController = GameObject.Find("SceneController");
         playerData = SceneController.GetComponent<MainPlayerData>();
 
-        action.SetActive(false);
-
         bandera = 0;
+
+        characterName = gameObject.name;
 
     }
     private void Update()
     {
-        Debug.Log(bandera);
 
-        if (playerData.playerAnimalStatus != "Monkey")
+
+        if (playerData.playerAnimalStatus != characterName)
         {
             estadoActual = 0;
         }
-        else if (playerData.playerAnimalStatus == "Monkey" && bandera == 0)
+        else if (playerData.playerAnimalStatus == characterName && bandera == 0)
         {
             estadoActual = 1;
 
@@ -46,7 +47,7 @@ public class DialogStarter : MonoBehaviour
             }
 
         }
-        else if (playerData.playerAnimalStatus == "Monkey" && bandera ==1)
+        else if (playerData.playerAnimalStatus == characterName && bandera ==1)
         {
             estadoActual = 2;
             
@@ -56,8 +57,6 @@ public class DialogStarter : MonoBehaviour
 
         if (playerIsNear)
         {
-            chat.SetActive(!playerData.onDialog);
-            action.SetActive(!playerData.onDialog);
 
             if (Input.GetKeyUp(DialogController.singleton.teclaInicioDialogo))
             {
@@ -65,23 +64,6 @@ public class DialogStarter : MonoBehaviour
 
             }
 
-            if (playerData.playerAnimalStatus != "Monkey")
-            {
-                action.SetActive(true);
-
-            }
-            else
-            {
-                action.SetActive(false);
-            }
-
-
-
-        }
-        else
-        {
-            action.SetActive(false);
-            chat.SetActive(false);
 
         }
 
@@ -108,6 +90,7 @@ public class DialogStarter : MonoBehaviour
         if (other.tag == "Player")
         {
             playerIsNear = false;
+
         }
 
 
