@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class DestroyOnBullet : MonoBehaviour
 {
-    [SerializeField] GameObject puzzle;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Bullet")
         {
             Destroy(gameObject);
-
-            if (gameObject.name == "QueenBee(Clone)")
-            {
-                Instantiate(puzzle, gameObject.transform.position, Quaternion.identity);
-
-                
-            }
-
         }
-
-
     }
 }

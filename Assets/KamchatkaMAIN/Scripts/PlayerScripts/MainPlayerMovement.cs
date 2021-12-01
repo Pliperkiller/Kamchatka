@@ -14,39 +14,19 @@ public class MainPlayerMovement : MonoBehaviour
     private float originalStepOffset;
     private float? lastGroundTime;
     private float? jumpPressTime;
-    private float horizontalInput;
-    private float verticalInput;
-
-    private MainPlayerData playerData;
-    private GameObject SceneController;
-
-    public bool isMoving;
-    public bool onAir;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
         originalStepOffset = controller.stepOffset;
-        onAir = false;
-
-        SceneController = GameObject.Find("SceneController");
-        playerData = SceneController.GetComponent<MainPlayerData>();
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (playerData.onDialog)
-        {
-            horizontalInput = 0.0f;
-            verticalInput = 0.0f;
-        }
-        else
-        {
-            horizontalInput = Input.GetAxis("Horizontal");
-            verticalInput = Input.GetAxis("Vertical");
-        }
+        float horizontalInput = Input.GetAxis("Horizontal");
+        float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
 
@@ -60,8 +40,6 @@ public class MainPlayerMovement : MonoBehaviour
         if (controller.isGrounded)
         {
             lastGroundTime = Time.time;
-            onAir = false;
-
         }
 
         if (Input.GetButtonDown("Jump"))
@@ -77,7 +55,6 @@ public class MainPlayerMovement : MonoBehaviour
             if (Time.time - jumpPressTime <= jumpDelayTime)
             {
                 ySpeed = jumpSpeed;
-                onAir = true;
                 jumpPressTime = null;
                 lastGroundTime = null;
 
@@ -103,14 +80,7 @@ public class MainPlayerMovement : MonoBehaviour
             Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
 
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-
-            isMoving = true;
         }
-        else
-        {
-            isMoving = false;
-        }
-
 
     }
 

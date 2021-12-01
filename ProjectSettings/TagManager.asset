@@ -12,7 +12,6 @@ TagManager:
   - EnemySpawn
   - EndZone
   - PlayerModel
-  - NPC
   layers:
   - Default
   - TransparentFX

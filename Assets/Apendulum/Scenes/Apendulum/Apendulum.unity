@@ -616,7 +616,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: {fileID: 418693860440470959, guid: 97793611d6b65c8499933c6311adf5ec, type: 3}
-  puzzle: {fileID: 5824419325500475137, guid: 69b858f308e11a14f9aa066131f72d25, type: 3}
   amount: 0
 --- !u!114 &79014097
 MonoBehaviour:
@@ -630,9 +629,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2316efa311e7a8e498970e15110b62cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
   points: 0
   HasPuzzle: 0
-  puzzleOnBoard: 0
   Dead: 0
 --- !u!114 &79014098
 MonoBehaviour:

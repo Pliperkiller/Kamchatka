@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimalConversion : MonoBehaviour
@@ -5,14 +7,10 @@ public class AnimalConversion : MonoBehaviour
     private MainPlayerData playerData;
     private GameObject SceneController;
     private GameObject newModel;
-    private GameObject targetModel;
-
 
     [SerializeField] private GameObject[] animalPrefabs;
 
-    public bool interactPosible;
-
-    
+    // Start is called before the first frame update
     void Start()
     {
         SceneController = GameObject.Find("SceneController");
@@ -27,14 +25,16 @@ public class AnimalConversion : MonoBehaviour
 
     }
 
-    
+    // Update is called once per frame
     void Update()
-    {     
-        if (Input.GetKeyDown("e") && interactPosible)
+    {
+        
+        if (Input.GetKeyDown("e"))
         {
-            morph(targetModel.name);
-
+            morph("Monkey");
         }
+
+        Debug.Log(playerData.playerAnimalStatus);
 
     }
 
@@ -57,7 +57,7 @@ public class AnimalConversion : MonoBehaviour
             newModel = Instantiate(animalPrefabs[2]);
             newModel.transform.SetParent(transform, false);
 
-            playerData.playerAnimalStatus = "Bear";
+            playerData.playerAnimalStatus = "Monkey";
         }
 
         if (target == "Squirrel" && playerData.playerAnimalStatus != "Squirrel")
@@ -67,7 +67,7 @@ public class AnimalConversion : MonoBehaviour
             newModel = Instantiate(animalPrefabs[3]);
             newModel.transform.SetParent(transform, false);
 
-            playerData.playerAnimalStatus = "Squirrel";
+            playerData.playerAnimalStatus = "Monkey";
         }
 
         if (target == "Otter" && playerData.playerAnimalStatus != "Otter")
@@ -77,31 +77,9 @@ public class AnimalConversion : MonoBehaviour
             newModel = Instantiate(animalPrefabs[4]);
             newModel.transform.SetParent(transform, false);
 
-            playerData.playerAnimalStatus = "Otter";
+            playerData.playerAnimalStatus = "Monkey";
         }
 
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "NPC"){
-
-            interactPosible = true;
-            targetModel = other.gameObject;
-
-
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.tag == "NPC")
-        {
-
-            interactPosible = false;
-
-
-        }
     }
 
 }

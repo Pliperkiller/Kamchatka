@@ -5,7 +5,6 @@ using UnityEngine;
 public class GenerateFruit : MonoBehaviour
 {
     [SerializeField] private GameObject fruit;
-    [SerializeField] private GameObject puzzle;
     [SerializeField] private int amount;
     private GameObject item;
     private float xpos;
@@ -13,11 +12,8 @@ public class GenerateFruit : MonoBehaviour
     private float zpos;
     private Vector3 pos;
     private GameObject SceneController;
-    private PlayerData playerData;
+    private PlayerData PlayerData;
     private GameObject[] gos;
-    private bool pieceOnScene = false;
-    private int RNG;
-
     
 
 
@@ -25,7 +21,7 @@ public class GenerateFruit : MonoBehaviour
     void Start()
     {
         SceneController = GameObject.Find("SceneController");
-        playerData = SceneController.GetComponent<PlayerData>();
+        PlayerData = SceneController.GetComponent<PlayerData>();
         amount = 4;
 
         for (int i = 0; i < amount; i++)
@@ -71,20 +67,7 @@ public class GenerateFruit : MonoBehaviour
 
     public void NuevaFruta(Vector3 position)
     {
-        RNG = Random.Range(0, 5);
-
-        if ((RNG == 0) && (playerData.HasPuzzle == false) && (playerData.puzzleOnBoard==false) && (playerData.points>1))
-        {
-            Instantiate(puzzle, position, Quaternion.identity);
-            playerData.puzzleOnBoard = true;
-
-        }
-        else
-        {
-            Instantiate(fruit, position, Quaternion.identity);
-
-        }
-
+        Instantiate(fruit,position,Quaternion.identity);
     }
 
 
