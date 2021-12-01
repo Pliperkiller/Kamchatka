@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class UIDisplay : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI Tlevel;
-    [SerializeField] TextMeshProUGUI Tpoints;
-    [SerializeField] TextMeshProUGUI Tnextlevel;
-    [SerializeField] TextMeshProUGUI Gpoints;
-    [SerializeField] GameObject GameOverPanel;
+    [SerializeField] private TextMeshProUGUI Tpoints;
+    [SerializeField] private Text Gpoints;
+    [SerializeField] private GameObject GameOverPanel;
 
     private GameObject SceneController;
     private PlayerData PlayerData;

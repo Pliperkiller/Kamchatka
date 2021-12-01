@@ -1,5 +1,7 @@
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
+
 
 public class grisslyUI : MonoBehaviour
 {
@@ -8,7 +10,7 @@ public class grisslyUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI Tnextlevel;
     [SerializeField] TextMeshProUGUI Thealth;
     [SerializeField] TextMeshProUGUI Tammo;
-    [SerializeField] TextMeshProUGUI Gpoints;
+    [SerializeField] private Text Gpoints;
 
     [SerializeField] GameObject GameOverPanel;
     [SerializeField] GameObject NewLevelPanel;

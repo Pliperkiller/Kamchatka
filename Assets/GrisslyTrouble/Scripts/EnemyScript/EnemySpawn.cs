@@ -46,7 +46,7 @@ public class EnemySpawn : MonoBehaviour
         RNG = Random.Range(0, 50);
         if (RNG == 0)
         {
-            Instantiate(enemies[1], transform.position, Quaternion.identity);
+            //Instantiate(enemies[1], transform.position, Quaternion.identity);
         }
         else
         {
