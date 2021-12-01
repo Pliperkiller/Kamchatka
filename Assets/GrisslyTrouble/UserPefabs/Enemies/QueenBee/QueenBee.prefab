@@ -720,6 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5d97dd549cccc64699009e586895db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzle: {fileID: 6003187328712009019, guid: e307d747d4441ee4b8bb6ed2a60ae932, type: 3}
 --- !u!114 &1518358097844614794
 MonoBehaviour:
   m_ObjectHideFlags: 0
