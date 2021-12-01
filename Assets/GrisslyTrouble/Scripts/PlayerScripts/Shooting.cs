@@ -18,7 +18,7 @@ public class Shooting : MonoBehaviour
     void Update()
     {
 
-        bool shootdown = Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
+        bool shootdown = Input.GetMouseButtonDown(0);
         if ( shootdown & (PlayerData.ammo>0))
         {
             Instantiate(Bullet, Playergun.transform.position, Playergun.transform.rotation);

@@ -7,6 +7,7 @@ public class GrisslyCharacterController : MonoBehaviour
     private float h;
     private float v;
     public float extraHoney = 0.0f;
+    public bool isMoving = false;
 
     private Rigidbody rb;
     private GrisslyPlayerData PlayerData;
@@ -33,17 +34,20 @@ public class GrisslyCharacterController : MonoBehaviour
         {
             
             VelVector = new Vector3(h * velocity/1.4142f, 0, v * velocity / 1.4142f);
+            isMoving = true;
 
         }
 
         else if(h!=0 || v != 0)
         {
             VelVector = new Vector3(h * velocity, 0, v * velocity);
+            isMoving = true;
 
         }
         else
         {
             VelVector = new Vector3(0, 0, 0);
+            isMoving = false;
 
         }
 
