@@ -4,12 +4,19 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Ball
+  - Pendulum
+  - Enemy
+  - Bullet
+  - Item
+  - Deadzone
+  - EnemySpawn
+  - EndZone
+  - PlayerModel
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 
