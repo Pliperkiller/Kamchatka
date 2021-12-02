@@ -20,7 +20,7 @@ public class PauseGame : MonoBehaviour
 
         PauseMenu.SetActive(false);
         Time.timeScale = 1;
-        if (SceneManager.GetActiveScene().name != "GrisslyTrouble")
+        if (SceneManager.GetActiveScene().name == "MainMap")
         {
             Cursor.lockState = CursorLockMode.Locked;
 
