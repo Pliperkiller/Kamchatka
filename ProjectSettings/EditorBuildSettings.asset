@@ -11,10 +11,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Apendulum/Scenes/Apendulum/Apendulum.unity
     guid: 8f9f0da14fc1a0a4fa92689ee4ded73c
-  - enabled: 1
+  - enabled: 0
     path: Assets/GrisslyTrouble/Scenes/IntroGrissly.unity
     guid: f50185c5ba896434eb58b041a3536723
-  - enabled: 1
+  - enabled: 0
     path: Assets/GrisslyTrouble/Scenes/GrisslyTrouble/GrisslyTrouble.unity
     guid: cf94483dfd267d94797d9dec1859a512
+  - enabled: 1
+    path: Assets/KamchatkaMAIN/Scenes/Intro/Intro.unity
+    guid: e2cc24208d828324da3343e52195ce57
+  - enabled: 1
+    path: Assets/KamchatkaMAIN/Scenes/MainMap/MainMap.unity
+    guid: 521e873f94d3d84419712f8ed8980068
   m_configObjects: {}

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Interact : MonoBehaviour
@@ -66,7 +64,7 @@ public class Interact : MonoBehaviour
 
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         
 
@@ -87,4 +85,17 @@ public class Interact : MonoBehaviour
 
 
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+
+        if (other.tag == "NPC")
+        {
+            nearTarget = false;
+
+
+        }
+
+    }
+
 }
