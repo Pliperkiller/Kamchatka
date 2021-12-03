@@ -30,14 +30,14 @@ public class grisslyUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Tlevel.text = PlayerData.level.ToString();
-        Tpoints.text = PlayerData.points.ToString();
-        Thealth.text = PlayerData.health.ToString();
-        Tammo.text = PlayerData.ammo.ToString();
+        Tlevel.text = "Nivel: "+ PlayerData.level.ToString();
+        Tpoints.text = "Puntuacion: " + PlayerData.points.ToString();
+        Thealth.text = "Salud: "+ PlayerData.health.ToString();
+        Tammo.text = "Municion: " + PlayerData.ammo.ToString();
 
         if (PlayerData.honeyAmount < 11)
         {
-            Tnextlevel.text = (PlayerData.honeyAmount*10).ToString() + "%";
+            Tnextlevel.text ="Miel: " + (PlayerData.honeyAmount*10).ToString() + "%";
         }
 
 
@@ -45,7 +45,7 @@ public class grisslyUI : MonoBehaviour
         if (PlayerData.Dead)
         {
             GameOverPanel.SetActive(true);
-            Gpoints.text = Tpoints.text;
+            Gpoints.text = PlayerData.points.ToString();
 
         }
 

@@ -13,8 +13,12 @@ public class GrisslyPlayerData : MonoBehaviour
     public bool Dead;
     public bool roundIsActive;
     public bool onCamp;
-    
-    
+    public bool pauseStatus;
+
+    private PauseGame pauseGame;
+    private GameObject pauseManager;
+
+
 
     void Start()
     {
@@ -28,6 +32,9 @@ public class GrisslyPlayerData : MonoBehaviour
         Dead = false;
         roundIsActive = false;
         onCamp = false;
+
+        pauseManager = GameObject.Find("PauseGameController");
+        pauseGame = pauseManager.GetComponent<PauseGame>();
 
 
     }
@@ -48,6 +55,8 @@ public class GrisslyPlayerData : MonoBehaviour
             nextLevel = true;
 
         }
+
+        pauseStatus = pauseGame.JuegoPausado; 
 
 
 

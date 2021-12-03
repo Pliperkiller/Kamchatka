@@ -11,6 +11,7 @@ public class EnemySpawn : MonoBehaviour
     private float epsilon;
     private Vector3 SpawnLocation;
     private int RNG;
+    private bool queenOnScene = false;
 
 
     // Start is called before the first frame update
@@ -44,9 +45,9 @@ public class EnemySpawn : MonoBehaviour
     private void addEnemy(Vector3 position)
     {
         RNG = Random.Range(0, 50);
-        if (RNG == 0)
+        if (RNG == 0 && queenOnScene == false && PlayerData.HasPuzzle == false)
         {
-            //Instantiate(enemies[1], transform.position, Quaternion.identity);
+            Instantiate(enemies[1], transform.position, Quaternion.identity);
         }
         else
         {

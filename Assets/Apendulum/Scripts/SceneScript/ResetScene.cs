@@ -14,9 +14,5 @@ public class ResetScene : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 }

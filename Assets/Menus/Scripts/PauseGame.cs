@@ -48,7 +48,7 @@ public class PauseGame : MonoBehaviour
             }
 
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.Escape) && SceneManager.GetActiveScene().name == "Intro")
         {
             Application.Quit();
 

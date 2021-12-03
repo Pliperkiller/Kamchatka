@@ -24,12 +24,5 @@ public class GrisslyAnimation : MonoBehaviour
         animator.SetBool("IsMoving", movement.isMoving);
         animator.SetBool("Attack", Input.GetMouseButtonDown(0));
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Debug.Log("Attack");
-        }
-
-
-
     }
 }

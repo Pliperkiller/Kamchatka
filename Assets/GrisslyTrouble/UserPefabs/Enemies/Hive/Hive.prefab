@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 5018538630360822177, guid: 0576ff394fcd88f488dcc182fa5a07a2, type: 3}
+  - {fileID: 5018538630360822177, guid: 3d65873c79ec003479a3b39cc6c68213, type: 3}
 --- !u!65 &2189399818517913460
 BoxCollider:
   m_ObjectHideFlags: 0

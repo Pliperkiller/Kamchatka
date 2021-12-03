@@ -15,10 +15,20 @@ public class Pickup : MonoBehaviour
 
     }
 
+    private void Update()
+    {
+
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
+            if (gameObject.name == "Puzzle(Clone)")
+            {
+                PlayerData.HasPuzzle = true;
+
+            }
             PlayerData.points++;
             PlayerData.honeyAmount++;
             Destroy(gameObject);

@@ -8,11 +8,7 @@ public class PointToMouse : MonoBehaviour
     private Vector3 Mousepos;
     private Vector3 Objectpos;
     private float angle;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()

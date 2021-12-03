@@ -24,13 +24,13 @@ public class UIDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Tpoints.text = PlayerData.points.ToString();
+        Tpoints.text = "Puntaje: " + PlayerData.points.ToString();
 
 
         if (PlayerData.Dead)
         {
             GameOverPanel.SetActive(true);
-            Gpoints.text = Tpoints.text;
+            Gpoints.text = PlayerData.points.ToString();
 
         }
     }

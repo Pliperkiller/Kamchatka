@@ -8,6 +8,8 @@ public class Shooting : MonoBehaviour
     private GrisslyPlayerData PlayerData;
     private GameObject SceneController;
 
+    private bool shootdown;
+
 
     private void Start()
     {
@@ -17,19 +19,26 @@ public class Shooting : MonoBehaviour
     }
     void Update()
     {
-
-        bool shootdown = Input.GetMouseButtonDown(0);
-        if ( shootdown & (PlayerData.ammo>0))
+        if (PlayerData.pauseStatus == false)
         {
-            Instantiate(Bullet, Playergun.transform.position, Playergun.transform.rotation);
+            shootdown = Input.GetMouseButtonDown(0);
 
-            PlayerData.ammo += -1;
+
+            if (shootdown & (PlayerData.ammo > 0))
+            {
+                Instantiate(Bullet, Playergun.transform.position, Playergun.transform.rotation);
+
+                PlayerData.ammo += -1;
+            }
+
+            if (Input.GetKeyDown("e") && PlayerData.onCamp)
+            {
+                PlayerData.ammo = 100;
+            }
+
         }
 
-        if (Input.GetKeyDown("e") && PlayerData.onCamp)
-        {
-            PlayerData.ammo = 100;
-        }
+
 
     }
 
