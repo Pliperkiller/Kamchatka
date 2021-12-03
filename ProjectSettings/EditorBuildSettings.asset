@@ -5,16 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/KamchatkaMAIN/Scenes/Intro/Intro.unity
     guid: e2cc24208d828324da3343e52195ce57
-  - enabled: 1
+  - enabled: 0
     path: Assets/KamchatkaMAIN/Scenes/MainMap/MainMap.unity
     guid: 521e873f94d3d84419712f8ed8980068
-  - enabled: 1
+  - enabled: 0
     path: Assets/Apendulum/Scenes/IntroApendulum.unity
     guid: 316169f1698bd99489daafed3c29803e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Apendulum/Scenes/Apendulum/Apendulum.unity
     guid: 8f9f0da14fc1a0a4fa92689ee4ded73c
   - enabled: 1

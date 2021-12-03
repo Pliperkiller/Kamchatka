@@ -18,9 +18,5 @@ public class ResetGrissly : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Application.Quit();
-        }
     }
 }
