@@ -334,6 +334,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tiempoCaida: 0.8
   puntoRotation: {x: -0.5, y: 0.5, z: 0}
+  panelPierdes: {fileID: 0}
+  panelGanar: {fileID: 0}
 --- !u!1 &395549895248679504
 GameObject:
   m_ObjectHideFlags: 0
