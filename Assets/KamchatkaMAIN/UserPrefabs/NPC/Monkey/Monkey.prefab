@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1649508495842543448}
-  - component: {fileID: 4612838204772637986}
   - component: {fileID: 2139187353176989157}
   - component: {fileID: 2139187353176989156}
   - component: {fileID: 2139187353176989159}
@@ -36,25 +35,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &4612838204772637986
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2139187353176989154}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: be96741dd66d9ac4589de95c170b6429, type: 3}
-  m_Controller: {fileID: 9100000, guid: 4aa261db7316e5c4a8c7925c239c06d3, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!54 &2139187353176989157
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -69,7 +49,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &2139187353176989156
 CapsuleCollider:
@@ -84,7 +64,7 @@ CapsuleCollider:
   m_Radius: 0.6612631
   m_Height: 3.3387518
   m_Direction: 1
-  m_Center: {x: 0.021632433, y: 1.1693759, z: -0.025287986}
+  m_Center: {x: 0.021632433, y: 1.58, z: -0.025287986}
 --- !u!135 &2139187353176989159
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -110,8 +90,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f60b57b6daa209c4a9e2172b36b4b9f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chat: {fileID: 8459502506768289842, guid: fc090ccad9ed98647b80843edd29bf1f, type: 3}
-  action: {fileID: 8349898618389372586, guid: cfaca95f2eb56ce4fb068047d754f8aa, type: 3}
   estadoActual: 0
   estados:
   - frases:
@@ -122,6 +100,25 @@ MonoBehaviour:
     - texto: Requiero que me ayudes con una tarea.
   - frases:
     - texto: "Hola de nuevo amigo, te gustar\xEDa conseguir mas frutas para m\xED"
+--- !u!95 &5398918238539626967
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2139187353866062927}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4aa261db7316e5c4a8c7925c239c06d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1256084564371894558
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +176,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 923bd9eeffdbb0b4fb46e00633446457, type: 3}
+--- !u!1 &2139187353866062927 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 923bd9eeffdbb0b4fb46e00633446457, type: 3}
+  m_PrefabInstance: {fileID: 1256084564371894558}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1649508496258995957 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 923bd9eeffdbb0b4fb46e00633446457, type: 3}

@@ -22,6 +22,7 @@ public class MainPlayerMovement : MonoBehaviour
 
     public bool isMoving;
     public bool onAir;
+    public bool onWater;
 
     void Start()
     {
@@ -145,4 +146,29 @@ public class MainPlayerMovement : MonoBehaviour
 
         return velocity;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Water")
+        {
+            onWater = true;
+
+            Debug.Log(other.tag);
+
+        }
+
+    }
+
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.tag == "Water")
+        {
+            onWater = false;
+
+
+        }
+
+    }
+
 }

@@ -13,6 +13,7 @@ TagManager:
   - EndZone
   - PlayerModel
   - NPC
+  - Water
   layers:
   - Default
   - TransparentFX

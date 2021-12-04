@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 
 public class MainPlayerData : MonoBehaviour
 {
@@ -13,19 +12,20 @@ public class MainPlayerData : MonoBehaviour
     public bool OtterPiece;
 
     public bool onDialog;
-
     public Transform playerLocation;
-    
+
 
     void Start()
     {
         playerAnimalStatus = "Default";
+       
 
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
+
+
 }

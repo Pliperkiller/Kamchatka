@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PauseMenu: {fileID: 2269332461188136960}
+  JuegoPausado: 0
 --- !u!1 &2269332461039021814
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +713,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SALIR AL MAPA
+  m_text: REGRESAR
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 478025730ed4c554a805fdd80b2a1736, type: 2}
   m_sharedMaterial: {fileID: 1104152612815368321, guid: 478025730ed4c554a805fdd80b2a1736, type: 2}
@@ -1509,9 +1510,10 @@ GameObject:
   - component: {fileID: 2269332462472893253}
   - component: {fileID: 2269332462472893252}
   - component: {fileID: 2269332462472893255}
+  - component: {fileID: 4297030317021555489}
   - component: {fileID: 2269332462472893258}
   m_Layer: 5
-  m_Name: Reiniciar
+  m_Name: Regresar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1618,7 +1620,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2269332462472893252}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4297030317021555489}
+        m_TargetAssemblyTypeName: RegresarButton, Assembly-CSharp
+        m_MethodName: LoadPreviousScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4297030317021555489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269332462472893249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac8c8b2548580044ab4980bdbaf0f921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!95 &2269332462472893258
 Animator:
   serializedVersion: 3

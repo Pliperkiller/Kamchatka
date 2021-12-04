@@ -15,8 +15,6 @@ public class DeleteOnCollision : MonoBehaviour
     {
         SceneController = GameObject.Find("SceneController");
         playerData = SceneController.GetComponent<PlayerData>();
-
-        Debug.Log(gameObject.name);
     }
 
 
