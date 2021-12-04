@@ -21,6 +21,10 @@ public class Tetronimos : MonoBehaviour
 
     [SerializeField] public static int nivelDeDificultad = 0;
 
+    [SerializeField] private GameObject panelPierdes;
+    [SerializeField] private GameObject panelGanar;
+
+
 
 
     void Start()
@@ -120,7 +124,8 @@ public class Tetronimos : MonoBehaviour
                 nivelDeDificultad = 0;
                 tiempoCaida = 0.8f;
 
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                panelPierdes.SetActive(true);
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
     }
@@ -179,6 +184,13 @@ public class Tetronimos : MonoBehaviour
         }
     }
 
+    void Ganar()
+    {
+        if(puntaje == 10)
+        {
+            panelPierdes.SetActive(true);
+        }
+    }
     void AumentarNivel ()
     {
         switch(puntaje)

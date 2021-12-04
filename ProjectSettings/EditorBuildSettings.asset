@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/GrisslyTrouble/Scenes/GrisslyTrouble/GrisslyTrouble.unity
     guid: cf94483dfd267d94797d9dec1859a512
+  - enabled: 1
+    path: Assets/Tetris/Scenes/IntroTetris.unity
+    guid: 17c66527e958b8d409d49c20780238dc
+  - enabled: 1
+    path: Assets/Tetris/Scenes/Tetris.unity
+    guid: 7fe5d88449e608e41a9bc7050a92bc14
+  - enabled: 1
+    path: Assets/Pong/Scenes/IntroPong.unity
+    guid: bd0e8b998c0f2d447856fa2d5b5a34ef
+  - enabled: 1
+    path: Assets/Pong/Scenes/Pong.unity
+    guid: 0a484ca92a8c46741ac3d45b6bf03cde
   m_configObjects: {}
