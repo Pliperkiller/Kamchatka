@@ -1,21 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Ball : MonoBehaviour
+public class Skipt : MonoBehaviour
+
+    
 {
-
-    [SerializeField] private Vector3 InitialImpulse;
-
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().AddForce(InitialImpulse, ForceMode.Impulse);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
+        if (Input.GetKeyDown("e"))
+        {
+            SceneManager.LoadScene("SuperPong", LoadSceneMode.Single);
+        }
     }
 }
