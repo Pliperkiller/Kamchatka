@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Ball : MonoBehaviour
@@ -8,9 +7,16 @@ public class Ball : MonoBehaviour
     private float imp_x;
     private float imp_z;
 
+    private GameObject sceneManager;
+    private PongPlayerData playerData;
+
     // Start is called before the first frame update
     void Start()
     {
+        sceneManager = GameObject.FindGameObjectWithTag("GameController");
+        playerData = sceneManager.GetComponent<PongPlayerData>();
+
+
         rb = GetComponent<Rigidbody>();
 
 
@@ -21,4 +27,15 @@ public class Ball : MonoBehaviour
         rb.AddForce(new Vector3(imp_x, 0f, imp_z), ForceMode.Impulse);
     }
 
+    private void Update()
+    {
+        if (playerData.gameIsPause)
+        {
+
+            rb.velocity = new Vector3(0f, 0f, 0f);
+
+
+        }
+
+    }
 }

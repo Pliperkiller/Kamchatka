@@ -2,7 +2,7 @@ using UnityEngine.SceneManagement;
 
 using UnityEngine;
 
-public class SkipScenePong : MonoBehaviour
+public class SceneSkipPong : MonoBehaviour
 {
 
     void Update()

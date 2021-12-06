@@ -18,9 +18,9 @@ public class PlayerBorder : MonoBehaviour
 
         if (ballOnBoard == false)
         {
-            time += Time.deltaTime;
+            time += Time.deltaTime*1.1f;
 
-            textTimer.text = ((int)time).ToString();
+            textTimer.text = (3-(int)time).ToString();
 
             if (time >= 3)
             {
@@ -29,6 +29,8 @@ public class PlayerBorder : MonoBehaviour
                 ballOnBoard = true;
 
                 textTimer.text = " ";
+
+                time = 0;
             }
 
         }
