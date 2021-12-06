@@ -5,7 +5,6 @@ using TMPro;
 public class DialogController : MonoBehaviour
 {
 
-    // Singleton
     public static DialogController singleton;
 
     [SerializeField] private GameObject dialogo;

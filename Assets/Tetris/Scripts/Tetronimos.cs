@@ -24,6 +24,8 @@ public class Tetronimos : MonoBehaviour
     [SerializeField] private GameObject panelPierdes;
     [SerializeField] private GameObject panelGanar;
 
+    private float t1 = 0;
+    private float t2 = 0;
 
 
 
@@ -36,20 +38,46 @@ public class Tetronimos : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            transform.position += new Vector3(-1, 0, 0);
-            if (!Limites())
-            {
-                transform.position -= new Vector3(-1, 0, 0);
-            }
+            MoveLeft();
+
         }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            t1 += Time.deltaTime;
+
+            if (t1 >= 0.1f)
+            {
+                MoveLeft();
+                t1 = 0;
+            }
+
+
+        }
+        else
+        {
+            t1 = 0f;
+        }
+
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            transform.position += new Vector3(1, 0, 0);
-            if (!Limites())
+            MoveRight();
+
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            t2 += Time.deltaTime;
+
+            if (t2 >= 0.1f)
             {
-                transform.position -= new Vector3(1, 0, 0);
+                MoveRight();
+                t2 = 0;
             }
+
+        }
+        else
+        {
+            t2 = 0f;
         }
 
         if (Time.time - tiempoAnterior > (Input.GetKey(KeyCode.S) ? tiempoCaida / 20 : tiempoCaida))
@@ -84,6 +112,27 @@ public class Tetronimos : MonoBehaviour
 
         
     }
+
+    private void MoveLeft()
+    {
+        transform.position += new Vector3(-1, 0, 0);
+        if (!Limites())
+        {
+            transform.position -= new Vector3(-1, 0, 0);
+        }
+
+    }
+
+    private void MoveRight()
+    {
+        transform.position += new Vector3(1, 0, 0);
+        if (!Limites())
+        {
+            transform.position -= new Vector3(1, 0, 0);
+        }
+
+    }
+
 
 
 
@@ -125,7 +174,7 @@ public class Tetronimos : MonoBehaviour
                 tiempoCaida = 0.8f;
 
                 panelPierdes.SetActive(true);
-                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
             }
         }
     }
