@@ -21,16 +21,19 @@ public class Tetronimos : MonoBehaviour
 
     [SerializeField] public static int nivelDeDificultad = 0;
 
-    [SerializeField] private GameObject panelPierdes;
-    [SerializeField] private GameObject panelGanar;
-
     private float t1 = 0;
     private float t2 = 0;
+
+    private GameObject sceneManager;
+    private TetrisPlayerData playerData;
 
 
 
     void Start()
     {
+
+        sceneManager = GameObject.FindWithTag("GameController");
+        playerData = sceneManager.GetComponent<TetrisPlayerData>();
 
     }
 
@@ -80,23 +83,28 @@ public class Tetronimos : MonoBehaviour
             t2 = 0f;
         }
 
-        if (Time.time - tiempoAnterior > (Input.GetKey(KeyCode.S) ? tiempoCaida / 20 : tiempoCaida))
+        if(playerData.playerStatus == "NAN")
         {
-            transform.position += new Vector3(0, -1, 0);
-
-            if (!Limites())
+            if (Time.time - tiempoAnterior > (Input.GetKey(KeyCode.S) ? tiempoCaida / 20 : tiempoCaida))
             {
-                transform.position -= new Vector3(0, -1, 0);
+                transform.position += new Vector3(0, -1, 0);
 
-                AñadirAlGrid();
-                RevisarLineas();
+                if (!Limites())
+                {
+                    transform.position -= new Vector3(0, -1, 0);
 
-                this.enabled = false;
-                FindObjectOfType<Generador>().NuevoTetromino();
+                    AñadirAlGrid();
+                    RevisarLineas();
+
+                    this.enabled = false;
+                    FindObjectOfType<Generador>().NuevoTetromino();
+                }
+
+                tiempoAnterior = Time.time;
             }
 
-            tiempoAnterior = Time.time;
         }
+        
 
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -107,8 +115,6 @@ public class Tetronimos : MonoBehaviour
             }
         }
 
-        AumentarNivel();
-        AumentarDificultad();
 
         
     }
@@ -173,7 +179,7 @@ public class Tetronimos : MonoBehaviour
                 nivelDeDificultad = 0;
                 tiempoCaida = 0.8f;
 
-                panelPierdes.SetActive(true);
+                playerData.playerStatus = "Lose";
                 
             }
         }
@@ -203,7 +209,7 @@ public class Tetronimos : MonoBehaviour
         }
 
         puntaje += 1;
-        Debug.Log(puntaje);
+        playerData.score = puntaje;
 
         return true;
     }
@@ -233,40 +239,6 @@ public class Tetronimos : MonoBehaviour
         }
     }
 
-    void Ganar()
-    {
-        if(puntaje == 10)
-        {
-            panelPierdes.SetActive(true);
-        }
-    }
-    void AumentarNivel ()
-    {
-        switch(puntaje)
-        {
-            case 5:
-                nivelDeDificultad = 1;
-                break;
-
-            case 10:
-                nivelDeDificultad = 2;
-                break;
-
-        }
-    }
-
-    void AumentarDificultad ()
-    {
-        switch(nivelDeDificultad)
-        {
-            case 1:
-                tiempoCaida = 0.4f;
-                break;
-
-            case 2:
-                tiempoCaida = 0.2f;
-                break;
-        }
-    }
+   
 
 }
