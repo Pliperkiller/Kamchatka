@@ -62,6 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a4b2416ed2364f4baec5ab132fe1f24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  grabSound: {fileID: 8300000, guid: cb5fe385a2305f04baf191b9248c67c1, type: 3}
 --- !u!114 &2211443134155039746
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,6 +75,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa91701be8a03cb47a65e49a8cf451b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deleteClip: {fileID: 8300000, guid: f0cb439ce5c3b8f43b6b3603e1b44892, type: 3}
+  scoreClip: {fileID: 8300000, guid: 835d4115674a5e64e92e4e1d5ea0057d, type: 3}
+  puzzleClip: {fileID: 8300000, guid: 209c8385f21e03846832ca80dc231f52, type: 3}
 --- !u!54 &-2388146158271952635
 Rigidbody:
   m_ObjectHideFlags: 0

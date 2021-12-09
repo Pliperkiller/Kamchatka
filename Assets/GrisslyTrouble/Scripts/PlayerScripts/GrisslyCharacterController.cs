@@ -13,6 +13,10 @@ public class GrisslyCharacterController : MonoBehaviour
     private GrisslyPlayerData PlayerData;
     private GameObject SceneController;
 
+    [SerializeField] AudioClip pickupClip;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -20,6 +24,9 @@ public class GrisslyCharacterController : MonoBehaviour
         PlayerData = SceneController.GetComponent<GrisslyPlayerData>();
 
         velocity = 5.0f;
+
+        audioSource = GetComponent<AudioSource>();
+
     }
 
 
@@ -59,11 +66,12 @@ public class GrisslyCharacterController : MonoBehaviour
     {
         if (other.tag == "Item")
         {
+            audioSource.PlayOneShot(pickupClip,1f);
             if (PlayerData.honeyAmount>10)
             {
                 extraHoney++;
 
-                velocity = 30 - 25 * Mathf.Exp(-0.005f * extraHoney);
+                velocity = 50 - 45 * Mathf.Exp(-0.007f * extraHoney);
                
 
             }

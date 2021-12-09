@@ -7,6 +7,15 @@ public class DeleteOnCollision : MonoBehaviour
     private int bandera = 1;
     private GameObject SceneController;
     private PlayerData playerData;
+    private float destroyTimer = 0.0f;
+    private bool setTimer;
+
+
+    [SerializeField] AudioClip deleteClip;
+    [SerializeField] AudioClip scoreClip;
+    [SerializeField] AudioClip puzzleClip;
+
+    private AudioSource audioSource;
 
 
 
@@ -15,9 +24,27 @@ public class DeleteOnCollision : MonoBehaviour
     {
         SceneController = GameObject.Find("SceneController");
         playerData = SceneController.GetComponent<PlayerData>();
+
+
+        audioSource = GetComponent<AudioSource>();
     }
 
 
+    private void Update()
+    {
+        if(setTimer)
+        {
+            destroyTimer += Time.deltaTime;
+
+            if (destroyTimer>1)
+            {
+                Destroy(gameObject);
+            }
+
+        }
+        
+
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -31,13 +58,25 @@ public class DeleteOnCollision : MonoBehaviour
                 bandera++;
                 playerData.points++;
 
+
                 if(gameObject.name == "Puzzle(Clone)")
                 {
                     playerData.puzzleOnBoard = false;
                     playerData.HasPuzzle = true;
+
+                    audioSource.PlayOneShot(puzzleClip, 1f);
+
+
+                }
+                else
+                {
+                    audioSource.PlayOneShot(scoreClip, 1f);
+
+
                 }
 
-                Destroy(gameObject);
+
+                setTimer = true;
 
             }
 
@@ -51,8 +90,10 @@ public class DeleteOnCollision : MonoBehaviour
                 playerData.puzzleOnBoard = false;
 
             }
+            audioSource.PlayOneShot(deleteClip,1f);
 
-            Destroy(gameObject);
+
+            setTimer = true;
         }
     }
 }

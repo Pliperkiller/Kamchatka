@@ -215,8 +215,8 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _ReflDistort: 0.44
-    - _RefrDistort: 0.4
+    - _ReflDistort: 0
+    - _RefrDistort: 0
     - _SampleGI: 0
     - _Shininess: 200
     - _Smoothness: 0.5
@@ -233,7 +233,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _WaveScale: 0.0738
+    - _WaveScale: 0.05
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:

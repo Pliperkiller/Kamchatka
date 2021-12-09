@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class HingeObject : MonoBehaviour
@@ -10,10 +9,13 @@ public class HingeObject : MonoBehaviour
     private bool contact;
     private int bandera = 1;
 
-    // Start is called before the first frame update
+    [SerializeField] AudioClip grabSound;
+    private AudioSource audioSource;
+
     void Start()
     {
         RB = GetComponent<Rigidbody>() as Rigidbody;
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,8 +48,10 @@ public class HingeObject : MonoBehaviour
     private void addhinge(Collision collision)
     {
         HingeJoint HJ = gameObject.AddComponent<HingeJoint>() as HingeJoint;
-        //HJ.anchor = collision.contacts[0].point;
         HJ.autoConfigureConnectedAnchor = true;
         HJ.connectedBody = collision.collider.attachedRigidbody;
+
+        audioSource.PlayOneShot(grabSound, 1f);
+
     }
 }

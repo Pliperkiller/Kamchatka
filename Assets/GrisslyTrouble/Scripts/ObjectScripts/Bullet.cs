@@ -8,14 +8,18 @@ public class Bullet : MonoBehaviour
     public float tlong = 6;
     private Rigidbody rb;
 
-    // Start is called before the first frame update
+    [SerializeField] AudioClip deadBeeClip;
+
+    private AudioSource audioSource;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
         rb.velocity = transform.forward * bspeed;
+
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (tlong > 0)
@@ -29,11 +33,15 @@ public class Bullet : MonoBehaviour
         }
         
     }
-    private void OnCollisionEnter(Collision collision)
+
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if(other.tag == "Enemy")
         {
-            Destroy(gameObject);
+            audioSource.PlayOneShot(deadBeeClip, 1f);
+
         }
+
     }
+
 }
