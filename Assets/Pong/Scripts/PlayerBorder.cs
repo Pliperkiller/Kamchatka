@@ -11,6 +11,14 @@ public class PlayerBorder : MonoBehaviour
     private bool ballOnBoard = true;
     [SerializeField] private TextMeshProUGUI textTimer;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip ballScore;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+    }
 
     private void Update()
     {
@@ -45,6 +53,9 @@ public class PlayerBorder : MonoBehaviour
         if (ball != null)
         {
             Destroy(ball.gameObject);
+
+            audioSource.PlayOneShot(ballScore, 1f);
+
 
             ballOnBoard = false;
 

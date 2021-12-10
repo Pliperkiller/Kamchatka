@@ -47,6 +47,8 @@ public class StartPong : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         tPong.SetActive(false);
+        playerIsNear = false;
+
 
     }
 }

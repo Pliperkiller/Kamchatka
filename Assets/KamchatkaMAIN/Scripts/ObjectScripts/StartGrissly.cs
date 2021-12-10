@@ -35,6 +35,7 @@ public class StartGrissly : MonoBehaviour
             {
                 tGrissly.SetActive(true);
                 playerIsNear = true;
+                Cursor.lockState = CursorLockMode.None;
 
 
             }
@@ -45,6 +46,8 @@ public class StartGrissly : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+        playerIsNear = false;
+
         tGrissly.SetActive(false);
 
     }

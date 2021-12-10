@@ -46,6 +46,7 @@ public class StartApendulum : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         tApendulum.SetActive(false);
+        playerIsNear = false;
 
     }
 }

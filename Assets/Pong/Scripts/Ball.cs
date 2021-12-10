@@ -10,11 +10,17 @@ public class Ball : MonoBehaviour
     private GameObject sceneManager;
     private PongPlayerData playerData;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip startGame;
+
     // Start is called before the first frame update
     void Start()
     {
         sceneManager = GameObject.FindGameObjectWithTag("GameController");
         playerData = sceneManager.GetComponent<PongPlayerData>();
+        audioSource = GetComponent<AudioSource>();
+
+        audioSource.PlayOneShot(startGame, 1f);
 
 
         rb = GetComponent<Rigidbody>();
