@@ -28,12 +28,20 @@ public class Tetronimos : MonoBehaviour
     private TetrisPlayerData playerData;
 
 
+    [SerializeField] AudioClip agregarFichaClip;
+    [SerializeField] AudioClip agregarPuntoClip;
+
+    private AudioSource audioSource;
+
+
 
     void Start()
     {
 
         sceneManager = GameObject.FindWithTag("GameController");
         playerData = sceneManager.GetComponent<TetrisPlayerData>();
+
+        audioSource = GetComponent<AudioSource>();
 
     }
 
@@ -113,6 +121,7 @@ public class Tetronimos : MonoBehaviour
             {
                 transform.RotateAround(transform.TransformPoint(puntoRotation), new Vector3(0, 0, 1), 90);
             }
+            audioSource.PlayOneShot(agregarFichaClip, 1f);
         }
 
 
@@ -211,6 +220,8 @@ public class Tetronimos : MonoBehaviour
         puntaje += 1;
         playerData.score = puntaje;
 
+        audioSource.PlayOneShot(agregarPuntoClip, 0.8f);
+
         return true;
     }
 
@@ -220,6 +231,8 @@ public class Tetronimos : MonoBehaviour
         {
             Destroy(grid[j, i].gameObject);
             grid[j, i] = null;
+
+            
         }
     }
 

@@ -12,18 +12,14 @@ public class MainPlayerData : MonoBehaviour
     public bool OtterPiece;
 
     public bool onDialog;
-    public Transform playerLocation;
+
 
 
     void Start()
     {
+
         playerAnimalStatus = "Default";
        
-
-    }
-
-    void Update()
-    {
 
     }
 
