@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/KamchatkaMAIN/Scenes/Intro/Intro.unity
     guid: e2cc24208d828324da3343e52195ce57
   - enabled: 1
+    path: Assets/Menus/Scenes/Creditos.unity
+    guid: 4adc9fdcb77eade46981a014927c8418
+  - enabled: 1
     path: Assets/KamchatkaMAIN/Scenes/MainMap/MainMap.unity
     guid: 521e873f94d3d84419712f8ed8980068
   - enabled: 1

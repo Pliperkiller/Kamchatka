@@ -1098,7 +1098,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 72072858}
-  m_LocalRotation: {x: 0.14222977, y: -0.5437786, z: 0.09412196, w: 0.8217157}
+  m_LocalRotation: {x: 0.14222977, y: -0.5437786, z: 0.09412197, w: 0.8217157}
   m_LocalPosition: {x: -157.65475, y: 13.1, z: -160.79071}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1609,7 +1609,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &113951412
 GameObject:
@@ -1640,7 +1640,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &113951414
 MonoBehaviour:
@@ -2013,7 +2013,7 @@ MonoBehaviour:
   - {fileID: 3024799227765060833, guid: 1c56475d00f2dd7468868cac4e785d23, type: 3}
   - {fileID: 3052320574456130441, guid: 871d5a8f6d20a344c9fa715bdc67e7f3, type: 3}
   - {fileID: 5428593407848603585, guid: 0e2ba367b31d83e44b536386fca5991b, type: 3}
-  - {fileID: 7099982648141598266, guid: 1c7a4aabc609f6144ad0f1bbf8a47bac, type: 3}
+  - {fileID: 1426262623637994149, guid: a3685f27feba4e54ea9817df2409bb59, type: 3}
   - {fileID: 4173456876244500451, guid: c3370d42ecd973b439357da54d0c65b9, type: 3}
   interactPosible: 0
 --- !u!1 &204959054
@@ -2463,7 +2463,7 @@ Transform:
   - {fileID: 1646112548}
   - {fileID: 395616648}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &253493426
 MonoBehaviour:
@@ -3760,7 +3760,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 395616646}
-  m_LocalRotation: {x: 0.16354786, y: -0.54114735, z: 0.10822943, w: 0.8177396}
+  m_LocalRotation: {x: 0.16354787, y: -0.54114735, z: 0.108229436, w: 0.8177396}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3858,6 +3858,82 @@ CapsuleCollider:
   m_Height: 140.56
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &412815761
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412815762}
+  - component: {fileID: 412815764}
+  - component: {fileID: 412815763}
+  m_Layer: 5
+  m_Name: TetrisActionTextHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &412815762
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412815761}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 709242990}
+  m_Father: {fileID: 491062447}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 387.2844, y: 293.8599}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &412815763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412815761}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.26415092, g: 0.2202919, b: 0.2202919, a: 0.44705883}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 0626b924325d1c34cafa6b22297f4e4f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &412815764
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412815761}
+  m_CullTransparentMesh: 1
 --- !u!1 &421891044
 GameObject:
   m_ObjectHideFlags: 0
@@ -4384,7 +4460,7 @@ Transform:
   - {fileID: 2090466887}
   - {fileID: 1374421819}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: -66.99, z: 0}
 --- !u!136 &483291769
 CapsuleCollider:
@@ -4566,6 +4642,7 @@ RectTransform:
   - {fileID: 30223465}
   - {fileID: 835198888}
   - {fileID: 1188148457}
+  - {fileID: 412815762}
   m_Father: {fileID: 1696303863}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6028,6 +6105,142 @@ CapsuleCollider:
   m_Height: 140.56
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &709242989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 709242990}
+  - component: {fileID: 709242992}
+  - component: {fileID: 709242991}
+  m_Layer: 5
+  m_Name: Action
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &709242990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709242989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 412815762}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 360.2388, y: 107.3695}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &709242991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709242989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Iniciar Tetris
+
+    (F)'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &709242992
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 709242989}
+  m_CullTransparentMesh: 1
 --- !u!1 &716295732
 GameObject:
   m_ObjectHideFlags: 0
@@ -7479,6 +7692,102 @@ CapsuleCollider:
   m_Height: 140.56
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1001 &855775322
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[0].frases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[0].frases.Array.data[1].texto
+      value: "- Su sonido es irreconocible para mis o\xEDdos humanos"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[0].texto
+      value: "\xA1Hola! Necesito que me ayudes"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[1].texto
+      value: "las bellotas han aumentado su tama\xF1o, est\xE1n un poco pesadas,
+        necesito recogerlas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[0].texto
+      value: "las bellotas han aumentado su tama\xF1o, est\xE1n un poco pesadas,
+        necesito recogerlas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 3610330261122660004, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[1].texto
+      value: "las bellotas han aumentado su tama\xF1o, est\xE1n un poco pesadas,
+        necesito recogerlas."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -109.324356
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.3256454
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -307.32098
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7240622942070166654, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011917586550918852, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_Name
+      value: Squirrel
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011917586550918852, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
+      propertyPath: m_TagString
+      value: NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b9db146edda4a1d4c8e5a158adbec723, type: 3}
 --- !u!1 &862996190
 GameObject:
   m_ObjectHideFlags: 0
@@ -7540,7 +7849,7 @@ Transform:
   - {fileID: 670446950}
   - {fileID: 974176835}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &871796250
 GameObject:
@@ -8192,7 +8501,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
       propertyPath: m_LocalScale.x
@@ -10732,7 +11041,7 @@ Transform:
   - {fileID: 1721683000}
   - {fileID: 68299985}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1230735880
 GameObject:
@@ -11144,7 +11453,7 @@ RectTransform:
   - {fileID: 1189441557}
   - {fileID: 2050084464}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -11850,7 +12159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1350757842
 GameObject:
@@ -13944,7 +14253,7 @@ Transform:
   - {fileID: 1899888015}
   - {fileID: 1668343760}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1601789044
 GameObject:
@@ -14376,7 +14685,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1646112546}
-  m_LocalRotation: {x: 0.14222974, y: -0.54377854, z: 0.09412195, w: 0.8217157}
+  m_LocalRotation: {x: 0.14222974, y: -0.54377854, z: 0.09412196, w: 0.8217157}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -14750,8 +15059,9 @@ Transform:
   - {fileID: 1423842952}
   - {fileID: 719522274}
   - {fileID: 2096691886}
+  - {fileID: 1880604125}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1700132337
 GameObject:
@@ -15317,7 +15627,7 @@ Transform:
   - {fileID: 377521232}
   - {fileID: 1734652255}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751083354
 GameObject:
@@ -16283,6 +16593,115 @@ CapsuleCollider:
   m_Height: 140.56
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1880604124
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1880604125}
+  - component: {fileID: 1880604129}
+  - component: {fileID: 1880604128}
+  - component: {fileID: 1880604127}
+  - component: {fileID: 1880604126}
+  m_Layer: 0
+  m_Name: StarterTetris
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1880604125
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880604124}
+  m_LocalRotation: {x: 0, y: -0.8694087, z: 0, w: 0.4940937}
+  m_LocalPosition: {x: -100.31, y: 7.41, z: -305.2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1696303863}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: -120.78, z: 0}
+--- !u!114 &1880604126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880604124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59be27439c14ae74c80d516b6fc42d3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tTetris: {fileID: 412815761}
+--- !u!135 &1880604127
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880604124}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 4.2
+  m_Center: {x: 0.00000059604645, y: -0.000000059604645, z: 0.0000006109476}
+--- !u!23 &1880604128
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880604124}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 0
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fed4e78bda2b3de45954637fee164b8c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1880604129
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880604124}
+  m_Mesh: {fileID: 4300004, guid: 959be6347b65b7a4c9baa6bc323541fd, type: 3}
 --- !u!1 &1887470258
 GameObject:
   m_ObjectHideFlags: 0
@@ -18466,7 +18885,7 @@ Transform:
   m_Children:
   - {fileID: 338782627}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2135279372
 PrefabInstance:
@@ -18522,6 +18941,45 @@ PrefabInstance:
     - target: {fileID: 2139187353176989154, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
       propertyPath: m_Name
       value: Monkey
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[0].texto
+      value: Me encuentro un poco cansado y fatigado.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[1].texto
+      value: "Desde que el cielo brill\xF3 he permanecido en esta condici\xF3n."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[2].texto
+      value: "\xA1He perdido mis fuerzas!  Me podr\xEDas recoger todo el alimento
+        por m\xED."
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[0].texto
+      value: mi familia y yo estamos muy agradecidos por el alimento que nos has
+        ayudado a recolectar
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[1].texto
+      value: "He escuchado que los osos tambi\xE9n se est\xE1n preparando para el
+        invierno"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[2].texto
+      value: ellos se encuentran en el oeste
+      objectReference: {fileID: 0}
+    - target: {fileID: 2139187353176989158, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[3].texto
+      value: sigue este camino para que puedas encontrarlos.
       objectReference: {fileID: 0}
     - target: {fileID: 4612838204772637986, guid: 215f1ab49cd597d4283ae6132ff5fa55, type: 3}
       propertyPath: m_Avatar
@@ -18757,7 +19215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &816684711262221380
 MonoBehaviour:
@@ -18788,7 +19246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2269332460800309634, guid: d7aadd19d5d25254688d64caa1795e7a, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2269332460800309634, guid: d7aadd19d5d25254688d64caa1795e7a, type: 3}
       propertyPath: m_AnchorMax.x
@@ -18913,24 +19371,85 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
-      propertyPath: estados.Array.data[2].frases.Array.size
+      propertyPath: estados.Array.data[0].frases.Array.size
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[0].frases.Array.data[1].texto
+      value: '- No puedo hablar el lenguaje de los osos...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[0].texto
+      value: Hemos sido atacados por las abejas y no hemos logrado recoger la miel
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
       propertyPath: estados.Array.data[1].frases.Array.data[1].texto
-      value: Bienvenido
+      value: les lanzamos rocas en nuestra defensa, lamentablemente son muchas abejas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[2].texto
+      value: "Debemos derribar a las abejas y as\xED tomar la miel para la \xE9poca
+        de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[3].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[4].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[5].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[6].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[7].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[8].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[9].texto
+      value: "Debemos derribar a las abejas, en especial a la abeja reina, y as\xED
+        tomar la miel para la \xE9poca de invierno."
       objectReference: {fileID: 0}
     - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
       propertyPath: estados.Array.data[2].frases.Array.data[0].texto
-      value: LA buena
+      value: 'Gracias por la miel, con ella podremos estar a salvo durante el tiempo
+        de invierno. '
       objectReference: {fileID: 0}
     - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
       propertyPath: estados.Array.data[2].frases.Array.data[1].texto
-      value: mi perro
+      value: "No muy lejos de aqu\xED se encuentran las nutrias. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6211257624414472080, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[2].texto
+      value: "Al norte, en la playa. Tambi\xE9n necesitan de tu ayuda."
       objectReference: {fileID: 0}
     - target: {fileID: 7147182415810454583, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7147182415810454583, guid: 72dd6cd3a5943154d85cae32de723899, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18985,9 +19504,71 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[0].frases.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[0].frases.Array.data[1].texto
+      value: '- No le entiendo a esta nutria pero parece con ganas de decirme algo...'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[0].texto
+      value: Me encuentro alejado de mi familia
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[1].texto
+      value: "solo recuerdo que la noche se ilumin\xF3 y yo me hice grande y se asustaron"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[2].texto
+      value: Si tan solo pudiera tener un momento de felicidad!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[3].texto
+      value: "\xBFPodr\xEDas jugar conmigo?, como sol\xEDa hacerlo con mi familia"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[1].frases.Array.data[4].texto
+      value: "juego de bal\xF3n! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[0].texto
+      value: 'Gracias por tu ayuda, ha sido un momento muy feliz. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[1].texto
+      value: Las Ardillas se encuentran al oeste de Kamchatka
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[2].texto
+      value: puedes tomar por aquel camino. si te apresuras tal vez puedes encontrarlas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[3].texto
+      value: "Las ardillas todo el tiempo est\xE1n en funci\xF3n de abastecerse para
+        el invierno"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589357905607518273, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
+      propertyPath: estados.Array.data[2].frases.Array.data[4].texto
+      value: "al romperse el talism\xE1n las bellotas aumentaron su tama\xF1o y las
+        ardillas no han logrado recolectarlas."
+      objectReference: {fileID: 0}
     - target: {fileID: 5096183368500885483, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5096183368500885483, guid: db80c6155ffa65340a16d7a9cb3eb8c8, type: 3}
       propertyPath: m_LocalPosition.x
